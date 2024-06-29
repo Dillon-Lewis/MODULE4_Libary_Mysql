@@ -28,6 +28,14 @@ def return_book():
                 query2 = 'UPDATE books SET availability = %s WHERE title = %s;'
 
                 cursor.execute(query2, availability_update)
+                
+                book_id = id
+
+                cursor = conn.cursor()
+
+                query3 = 'DELETE FROM borrowed_books WHERE book_id = %s'
+
+                cursor.execute(query3, (book_id, ))
                 conn.commit()
                 print(f"Thank you for returning {title}, we hope you enjoyed it!")
 
