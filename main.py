@@ -4,6 +4,7 @@ from user_add import add_user
 from user_get import get_user, get_user_list
 from rent_book import rent_book
 from return_book import return_book
+from borrowed_get import get_borrowed
 
 def main():
     while True:
@@ -37,7 +38,8 @@ Welcome to the Book Encyclopedia, what would you like to do:
 3. Return a book
 4. Search the Encyclopedia 
 5. Display the Encyclopedia
-6. Back to main menu
+6. Show rented books by member ID
+7. Back to main menu
     ''')
         if book_menu == '1':
             add_book()
@@ -50,6 +52,8 @@ Welcome to the Book Encyclopedia, what would you like to do:
         elif book_menu == '5':
             get_encyclopedia()
         elif book_menu == '6':
+            get_borrowed()
+        elif book_menu == '7':
             return main()
         else:
             print("Don't pull a Homer and please enter a valid selection")
