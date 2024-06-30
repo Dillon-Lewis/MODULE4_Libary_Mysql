@@ -17,6 +17,6 @@ ORDER OF OPERATIONS FOR PROJECT
 4. In individual files, create functions for list above and import them into the main function XXXXX
 5. Changing availability to defult varchar available XXXXX
    1. be able to update that to "unavailable" on book rental and back to available on return! XXXX
-6. fix error messages to exact errors and troubleshoot
-7. regex emails and phone numbers
-8. Add a "display rented books" tab and create fuction that will link it to the junction table
+6. fix error messages to exact errors and troubleshoot  XXXXXX
+7. regex emails and phone numbers   XXXXXX
+8. Add a "display rented books" tab and create fuction that will link it to the junction table XXXXX

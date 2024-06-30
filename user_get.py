@@ -16,8 +16,8 @@ def get_user():
             id, user_name, email, phone = cursor.fetchall()[0]
             print(f'{id}. Name: {user_name} Email: {email} Phone: {phone}')
 
-        except Error as e:
-            print*f"Error: {e}"
+        except IndexError:
+            print("Invalid entry, user not found. Check spelling and try again")
 
         finally:
             cursor.close()

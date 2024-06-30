@@ -14,13 +14,13 @@ How may I help you today:
 
 1. Book Encyclopedia
 2. Springfield Book Club
-4. Back to society
+3. Back to society
     ''')
         if main_menu == '1':
             book_encyclopedia()              
         elif main_menu == "2":
             Book_club()               
-        elif main_menu == '4':
+        elif main_menu == '3':
             print("Thank you for stopping by!")
             break
         else:
@@ -54,7 +54,7 @@ Welcome to the Book Encyclopedia, what would you like to do:
         elif book_menu == '6':
             get_borrowed()
         elif book_menu == '7':
-            return main()
+            break
         else:
             print("Don't pull a Homer and please enter a valid selection")
             continue
@@ -77,7 +77,7 @@ Welcome to the Springfield Library Book Club! How can I help you friend:
         elif club_menu == '3': 
             get_user_list()
         elif club_menu == '4':
-            return main()
+            break
         else:
             print("Don't pull a Homer and please enter a valid selection")
             continue

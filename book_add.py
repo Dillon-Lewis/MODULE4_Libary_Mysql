@@ -7,7 +7,7 @@ def add_book():
             cursor = conn.cursor()
 
             title = input("Lets get that new book in our encyclopedia!\nWhat is the title of the book you would like to add: \n").title()
-            author = input("Who wrote the book: \n").title()
+            author = input("Who is the author of the book: \n").title()
 
             new_member = (title, author)
 
@@ -15,10 +15,10 @@ def add_book():
 
             cursor.execute(query, new_member)
             conn.commit()
-            print(f"{title} but {author} has successfully been added to the encyclopedia!")
+            print(f"{title} by {author} has successfully been added to the encyclopedia!")
 
-        except Error as e:
-            print(f'Eror: {e}')
+        except IndexError:
+            print("Please enter a valid response and try again.")
 
         finally:
             if conn and conn.is_connected():

@@ -4,7 +4,7 @@ def return_book():
     conn = connect_db()
     if conn is not None:
         try:
-            title = input("Please enter the title of the book you are trying to return").title()
+            title = input("Please enter the title of the book you are trying to return:\n").title()
 
             cursor = conn.cursor()
 
