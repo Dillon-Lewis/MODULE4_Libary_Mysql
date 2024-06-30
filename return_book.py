@@ -8,8 +8,6 @@ def return_book():
 
             cursor = conn.cursor()
 
-            query = conn.cursor()
-
             query = 'SELECT * FROM books WHERE title = %s'
 
             cursor.execute(query, (title, ))
@@ -22,8 +20,6 @@ def return_book():
                 change_availability = "available for rent"
 
                 availability_update = (change_availability, title)
-
-                query2 = conn.cursor()
 
                 query2 = 'UPDATE books SET availability = %s WHERE title = %s;'
 
